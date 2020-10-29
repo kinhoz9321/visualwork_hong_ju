@@ -1,0 +1,69 @@
+<!DOCTYPE html><!-- HTML5 문서 형식이라고 선언하는 선언부 -->
+<html lang="en"><!-- 주 사용 언어가 영어임을 나타낸다 -->
+<head>
+    <!--
+        [ HEAD 요소에 포함되는 내용 ]
+        1. 주요 설정 정보
+        2. 웹 페이지의 제목
+        3. style 요소
+        4. script 요소
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_basic.html</title>
+    <style>
+        /* CSS 사용 주석 */
+        h1{
+            color: aquamarine;
+            font-size: 40px;
+        }
+        /*
+        선택자{
+            CSS의 요소 : 요소값
+        }
+        */
+    </style>
+    <script>
+        alert('안녕하세요. 저는 javascript 실험 alert창 입니다.');
+        // alert = 함수 경고창
+    </script>
+    <!-- 
+        <style> = css를 작성하는 영역
+        <script> = javascript를 작성하는 영역
+    -->
+</head>
+<body>
+    <!--
+        [ BODY 요소에 포함되는 내용 ]
+        1. 웹브라우저에 표시될 내용
+        2. script 요소
+    -->
+    <!-- HTML 사용 주석 -->
+    <h1>HTML, CSS, JAVASCRIPT 맛보기</h1>
+    <p>
+        HTML - 전부<br/>
+        CSS - style h1 색깔을 바꾸고 폰트 사이즈 바꿈<br/>
+        JAVASCRIPT - script alert 알림창 설정
+    </p>
+    <p> 
+        <!-- TIP! 자리를 차지해야하는 아무 문자열을 써야 할 때 Lorem 사용하기-->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia esse assumenda fuga dolorem? Obcaecati velit esse, nisi odio, sequi error reiciendis eum incidunt, eligendi at repellendus repellat aperiam veritatis quos.
+    </p>
+    <script>
+        // SCRIPT 한줄 주석
+        /* SCRIPT 여러줄 주석 */
+    </script>
+</body>
+</html>
+<!--
+    HTML 자식요소 - head, body
+    HEAD 자식요소 - style
+    이것들은 정해진 형식에 따라야 한다.
+    script는 HEAD, BODY 어디에 들어가든 상관이 없음.
+    둘 다에 동시에 넣어도 되고, 여러군데에 넣어도 된다.
+    대신 웹 브라우저는 위에서부터 해석하니
+    해석하는 시점이 달라진다는 것을 기억할 것!
+
+    CSS는 형식
+    Javascript는 언어 - 고려해야 할 것들이 훨씬 많다.
+-->
