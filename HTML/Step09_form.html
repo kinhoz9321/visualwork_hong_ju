@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_form.html</title>
+</head>
+<body>
+    <h1>form 요소 작성하기</h1>
+    <form action="login.jsp">
+        <label for="email">이메일</label>
+        <input type="text" id="email" name="email">
+        
+        <label for="pwd">비밀번호</label>
+        <input type="password" id="pwd" name="pwd">
+        
+        <button type="submit">로그인</button>
+    </form>
+    <!--
+        기본적인 form (입력양식)
+
+        *** 중요! ***
+        label 태그가 없으면 input 태그가 있어도 이메일이라고 읽어주지 않는다. 웹 접근성에 대한 중요한 문제.
+        label for 의 value는 id 의 value와 같아야 한다.
+
+        name = 서버에서 읽어내는데 필요한 형식, 서버에 전송되는 값의 이름을 결정
+
+        input type 요소에 따라 작성이 달라진다.
+        ex) text, password
+        password는 내가 치는 문자가 보이지 않게 만들어준다.
+
+        submit 버튼을 누르면 action의 값("login.jsp"으로 제출이 된다.
+    -->
+</body>
+</html>
+<!--
+    form 요소의 중요한 세가지!
+    1) label 태그가 없으면 input 태그가 있어도 "이메일"이라고 읽어주지 않는다. 웹 접근성에 대한 중요한 문제!
+    label과 input의 관계에 대해 기억하기!
+
+    2) <input type="text">, <input type="password">
+    type 요소에 따라 폼의 작성이 달라진다. 
+    password는 내가 치는 문자가 보이지 않게 만들어준다. 
+
+    3) <button type="submit"> -> <form action="login.jsp">
+        submit 버튼을 누르면 action의 값("login.jsp")으로 제출이 된다.
+-->
