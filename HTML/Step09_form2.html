@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_form2.html</title>
+</head>
+<body>
+    <h1>회원가입 form 입니다.</h1>
+    <form action="signup.jsp">
+
+        <!-- 이메일 작성 -->
+        <!-- 1 (수업) -->
+        <label for="email">이메일</label>
+        <input type="text" id="email" name="email"><br/>
+        <!-- 2 -->
+        <label>
+            이메일 <input type="text" name="email">
+        </label>
+
+        <!-- 성별 정보 선택 -->
+        <!-- 1 -->
+        <fieldset>
+            <legend>성별 정보 선택</legend>
+            <label for="gender">남자</label>
+            <input type="radio" id="gender" name="gender" value="man"/>
+            <label for="gender">여자</label>
+            <input type="radio" id="gender" name="gender" value="woman" checked/>
+        </fieldset><br/>
+        <!-- 2 (수업) -->
+        <fieldset>
+            <legend>성별 정보 선택</legend>
+            <label>
+                남자 <input type="radio" name="gender2" value="man" checked/>
+            </label>
+            <label>
+                여자 <input type="radio" name="gender2" value="woman"/>
+            </label><br/>
+        </fieldset><br/>
+
+        <!-- 취미 정보 선택 -->
+        <!-- 1 -->
+        <fieldset>
+            <legend>취미 정보 선택</legend>
+            <label for="hobby">피아노</label>
+            <input type="checkbox" id="hobby" name="hobby" value="piano"/>
+            <label for="hobby">코바늘뜨기</label>
+            <input type="checkbox" id="hobby" name="hobby" value="crochet"/>
+            <label for="hobby">맥주</label>
+            <input type="checkbox" id="hobby" name="hobby" value="beer"/>
+            <label for="hobby">독서</label>
+            <input type="checkbox" id="hobby" name="hobby"
+            value="reading">
+        </fieldset><br/>
+        <!-- 2 (수업) -->
+        <fieldset>
+            <legend>취미 정보 선택</legend>
+            <label>
+                <input type="checkbox" name="hobby2" value="piano"/> 피아노
+            </label>
+            <label>
+                <input type="checkbox" name="hobby2" value="crochet"/> 코바늘뜨기
+            </label>
+            <label>
+                <input type="checkbox" name="hobby2" value="beer"/> 맥주
+            </label>
+            <label>
+                <input type="checkbox" name="hobby2" value="reading"/> 독서
+            </label>
+        </fieldset><br/>
+
+        <!-- 직업 선택 -->
+        <!-- 1 -->
+        <label for="job">직업 선택</label><br/>
+        <select name="job" id="job">
+            <option value="">선택</option>
+            <option value="teacher">선생님</option>
+            <option value="doctor">의사</option>
+            <option value="developer">개발자</option>
+            <option value="etc">기타</option>
+        </select><br/>
+
+        <!-- 점심 메뉴 선택 -->
+        <!-- 1 -->
+        <label for="lunch">점심 메뉴 선택</label><br/>
+        <select name="lunch" id="lunch" multiple>
+            <option value="">선택</option>
+            <option value="m1">자장면</option>
+            <option value="m2">짱뽕</option>
+            <option>군만두</option>
+            <option>탕수육</option>
+        </select><br/>
+
+        <!-- 커피 선택 -->
+        <!-- 1 -->
+        <label for="coffee">커피 선택</label><br/>
+        <select name="coffee" id="coffee">
+            <optgroup laber="에스프레소">
+                <option>카페모카</option>
+                <option>카라멜 마끼야또</option>
+                <option>아인슈페너</option>
+            </optgroup>
+            <optgroup label="프라푸치노">
+                <option>청포도 프라푸치노</option>
+                <option>카라멜 프라푸치노</option>
+                <option>딸기 프라푸치노</option>
+            </optgroup>
+        </select><br/>
+
+        <!-- 첨부 파일 -->
+        <!-- 1 (수업) -->
+        <label for="file">첨부 파일</label>
+        <input type="file" id="file" name="file"/><br/>
+        <!-- 2 -->
+        <fieldset>
+            <legend>첨부 파일</legend>
+            <label>
+                <input type="file" name="file">
+            </label><br/>
+        </fieldset>
+
+        <!-- 하고 싶은 말 -->
+        <!-- 1 (수업) -->
+        <label for="comment">하고 싶은 말</label><br/>
+        <textarea name="comment" id="comment" cols="30" rows="10"></textarea><br/>
+        <button type="submit">가입</button>
+        <button type="reset">취소</button><br/>
+        <!-- 2 -->
+        <fieldset>
+            <legend>하고 싶은 말</legend>
+            <label>
+                <textarea name="comment" cols="30" rows="10"></textarea>
+            </label><br/>
+            <button type="submit">가입</button>
+            <button type="reset">취소</button>
+        </fieldset>
+    </form>
+</body>
+</html>

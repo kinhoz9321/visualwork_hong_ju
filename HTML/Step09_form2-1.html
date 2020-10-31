@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_form2.html</title>
+</head>
+<body>
+    <h1>회원가입 form 입니다.</h1>
+    <form action="signup.jsp">
+
+        <!-- 이메일 작성 -->
+        <!-- 1 (수업) -->
+        <label for="email">이메일</label>
+        <input type="text" id="email" name="email"><br/>
+        <!-- 2 -->
+        <label>
+            이메일 <input type="text" name="email">
+        </label>
+
+        <!-- 성별 정보 선택 -->
+        <!-- 1 -->
+        <fieldset>
+            <legend>성별 정보 선택</legend>
+            <label for="gender">남자</label>
+            <input type="radio" id="gender" name="gender" value="man"/>
+            <label for="gender">여자</label>
+            <input type="radio" id="gender" name="gender" value="woman" checked/>
+        </fieldset><br/>
+        <!-- 2 (수업) -->
+        <fieldset>
+            <legend>성별 정보 선택</legend>
+            <label>
+                남자 <input type="radio" name="gender2" value="man"/>
+            </label>
+            <label>
+                여자 <input type="radio" name="gender2" value="woman"/>
+            </label><br/>
+        </fieldset><br/>
+        <!--
+            fieldset, legend 는 선택지에 대한 추가정보를 준다.
+            웹 접근성 관련.
+            ex)이메일을 안내받아 작성한 후 갑자기 남자. 라고 스크린 리더기가 읽어주면 시각장애인분들은 당황스럽다. 이 때 fieldset과 legend로 성별 정보 선택이라는 추가정보를 미리 안내해 줄 수 있다.
+
+            radio 속성값은 name 속성에 따라 선택지의 선택이 한개만 가능하다.
+            하나의 카테고리에서 name의 속성이 다르면 여러개가 선택될 수도 있다. 
+            ex)name, name2
+
+            * checked - 페이지가 로딩되는 시점에 미리 check되어 나오게 하는 속성.
+
+            *** name = 서버에 전송되는 값의 카테고리를 결정 
+            *** value = 서버에 전송되는 값 결정
+        -->
+
+        <!-- 취미 정보 선택 -->
+        <!-- 1 -->
+        <fieldset>
+            <legend>취미 정보 선택</legend>
+            <label for="hobby">피아노</label>
+            <input type="checkbox" id="hobby" name="hobby" value="piano"/>
+            <label for="hobby">코바늘뜨기</label>
+            <input type="checkbox" id="hobby" name="hobby" value="crochet" checked/>
+            <label for="hobby">맥주</label>
+            <input type="checkbox" id="hobby" name="hobby" value="beer"/>
+            <label for="hobby">독서</label>
+            <input type="checkbox" id="hobby" name="hobby"
+            value="reading">
+        </fieldset><br/>
+        <!-- 2 (수업) -->
+        <fieldset>
+            <legend>취미 정보 선택</legend>
+            <label>
+                <input type="checkbox" name="hobby2" value="piano"/> 피아노
+            </label>
+            <label>
+                <input type="checkbox" name="hobby2" value="crochet"/> 코바늘뜨기
+            </label>
+            <label>
+                <input type="checkbox" name="hobby2" value="beer"/> 맥주
+            </label>
+            <label>
+                <input type="checkbox" name="hobby2" value="reading"/> 독서
+            </label>
+        </fieldset><br/>
+        <!--
+            checkbox는 name 속성이 같아도 여러 개의 value를 선택할 수 있다.
+            * radio/checkbox는 주로 label 태그 안에서 작성을 한다.
+            label 태그 안에 들어가면 자동으로 label 네임으로 선택되기 때문이다.
+        -->
+
+        <!-- 직업 선택 -->
+        <!-- 1 -->
+        <label for="job">직업 선택</label><br/>
+        <select name="job" id="job">
+            <option value="">선택</option>
+            <option value="teacher">선생님</option>
+            <option value="doctor">의사</option>
+            <option value="developer" selected/>개발자</option>
+            <option value="etc">기타</option>
+        </select><br/>
+        <!--
+            select는 하나의 value만 선택할 수 있다.
+            * radio와 select는 그룹 중 하나만 선택이 가능하다는 점에서 비슷하다.
+            둘 중 어떤 ui를 사용할지는 개발자의 선택.
+
+            * 공백과 빈문자열의 다르다.
+            ex)선택 = 빈문자열(empty string)
+            공백은 아예 주소창에 넘어가는 name이 없지만, 빈문자열은 job= 까지만 나옴.
+
+            * selected - 페이지가 로딩되는 시점에 미리 select 되어 나오게 하는 속성. (checked와 비슷한 역할을 한다.)
+        -->
+
+        <!-- 점심 메뉴 선택 -->
+        <!-- 1 -->
+        <label for="lunch">점심 메뉴 선택</label><br/>
+        <select name="lunch" id="lunch" multiple>
+            <option value="">선택</option>
+            <option value="m1">자장면</option>
+            <option value="m2">짬뽕</option>
+            <option>군만두</option>
+            <option>탕수육</option>
+        </select><br/>
+        <!--
+            multiple의 역할 = Ctrl을 누르고 선택하면 여러 개를 선택할 수 있다.
+            checkbox와 multiple select는 여러 개를 선택 가능하다는 점에서 비슷하다.
+
+            * select 요소에서 multiple select인 것과 multiple select가 아닌 것 구분하기.
+
+            * option 요소에 value ex)m1, m2, m3, m4 가 없으면
+            inner text ex)자장면, 짬뽕, 군만두, 탕수육 이 value로 전송된다.
+        -->
+
+        <!-- 커피 선택 -->
+        <!-- 1 -->
+        <label for="coffee">커피 선택</label><br/>
+        <select name="coffee" id="coffee">
+            <optgroup laber="에스프레소">
+                <option>카페모카</option>
+                <option>카라멜 마끼야또</option>
+                <option>아인슈페너</option>
+            </optgroup>
+            <optgroup label="프라푸치노">
+                <option>청포도 프라푸치노</option>
+                <option>카라멜 프라푸치노</option>
+                <option>딸기 프라푸치노</option>
+            </optgroup>
+        </select><br/>
+        <!--
+            optgroup = option group
+            select 안에서 옵션 카테고리를 만들어준다.
+        -->
+
+        <!-- 첨부 파일 -->
+        <!-- 1 (수업) -->
+        <label for="file">첨부 파일</label>
+        <input type="file" id="file" name="file"/><br/>
+        <!-- 2 -->
+        <fieldset>
+            <legend>첨부 파일</legend>
+            <label>
+                <input type="file" name="file">
+            </label><br/>
+        </fieldset>
+        <!--
+            input type="file"
+            웹 브라우저 안에서 파일을 선택해서 전송 할 수 있게 만들어준다.
+            ex) 이메일 파일첨부하기
+        -->
+
+        <!-- 하고 싶은 말 -->
+        <!-- 1 (수업) -->
+        <label for="comment">하고 싶은 말</label><br/>
+        <textarea name="comment" id="comment" cols="30" rows="10"></textarea><br/>
+        <button type="submit">가입</button>
+        <button type="reset">취소</button><br/>
+        <!-- 2 -->
+        <fieldset>
+            <legend>하고 싶은 말</legend>
+            <label>
+                <textarea name="comment" cols="30" rows="10"></textarea>
+            </label><br/>
+            <button type="submit">가입</button>
+            <button type="reset">취소</button>
+        </fieldset>
+        <!--
+            * textarea 요소는 개행기호를 인식한다. \n(enter)
+            여러 줄의 텍스트를 입력해서 전송 할 수 있다.
+            ex)댓글
+        -->
+    </form>
+</body>
+</html>
+<!--
+    *** 기억해야 할 것 ***
+    <form action="">
+    <label for="">와 <input id="">의 관계
+    <fieldset>,<legend>
+    <label>,<input>
+    <label>,<select>,<option>
+    <label>,<select>,<optgroup>,<option>
+    <label>,<textarea>
+    <button>
+    
+    text
+    password
+    radio
+    checkbox
+    file
+
+    option
+    textarea
+
+    submit
+    reset
+
+    *** form action = "server link"로 넘어갈 때 어떤 이름이 누구와 함께 전송되는지도 알기! 
+    ex) name=value
+-->
