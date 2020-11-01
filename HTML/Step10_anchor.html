@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step10_anchor.html</title>
+</head>
+<body>
+    <h1>a(anchor) 요소는 하이퍼링크, 책갈피, javascript 등을 수행할 때 사용한다.</h1>
+    <ul>
+        <li><a href="Step01_hello.html">Step01_hello.html로 바로가기</a></li>
+        <!-- 현재 위치를 기준으로 이동하는 상대경로 이동 -->
+
+        <li><a href="file:///C:/home/homestudy/visualwork_hong_ju/HTML/Step01_hello.html">Step01_hello.html로 바로가기</a></li>
+        <!-- 파일 시스템에서의 절대경로 이동 -->
+        
+        <li><a href="https://naver.com">naver 바로가기</a></li>
+        <!-- 웹에서의 절대경로 이동-->
+        
+        <li><a href="https://naver.com"><img src="images/rabbit2.png"/></a></li>
+        <!-- 이미지에 링크 걸기 -->
+        
+        <li>
+            <a href="https://naver.com">
+                <div>
+                    <h3>이동하기</h3>
+                    <img src="images/rabbit_1.png"/>
+                </div>
+            </a>
+        </li>
+        <!--
+            인라인 요소는 원래 블럭요소를 자식요소로 가질 수 없다.
+            단 a요소만 예외적으로 div같은 블럭요소를 자식요소로 가질 수 있다.
+            * 잘못된 예시 : <span><div>xxx</div></span> *
+        -->
+    </ul>
+</body>
+</html>
+<!--
+    a(anchor)태그는 링크를 거는데 사용한다.
+    컨텐츠를 나열할 때는 그냥 나열해서는 안된다.
+    꼭 리스트를 작성해서 그 안에 넣어줘야 한다.
+    tab을 눌러서 focus를 확인하면 링크의 크기를 확인할 수 있다.
+-->
