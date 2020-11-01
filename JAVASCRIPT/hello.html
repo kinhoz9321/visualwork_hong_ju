@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello.html</title>
+</head>
+<body>
+    <!-- 1 onclick 속성에서 javascript만 쓰기 -->
+    <p id="dog" onclick="document.querySelector('#dog').innerText='하늘';">세상에서 제일 귀여운 강아지는?</p>
+    <!-- 2 onclick 속성에서 함수(function) 쓰기 -->
+    <p id="dog2" onclick="cute();">세상에서 제일 귀여운 강아지는?</p>
+    <script>
+        function cute(){
+            document.querySelector('#dog2').innerText="♥우리집 하늘이♥";
+            document.querySelector('#dog2').style.color="lightyellow";
+            document.querySelector('#dog2').style.fontSize="50px";
+        }
+    </script>
+
+    <!-- 1 onmousemove 속성에서 javascript만 쓰기 -->
+    <p id="do" onmousemove="document.querySelector('#do').innerText='도경수 귀여워';">도경수</p>
+    <!-- 2 onmousemove 속성에서 함수(function) 쓰기 -->
+    <p id="do2" onmouseover="docute();" onmouseout="onOut();">도경수</p>
+    <script>
+        function docute(){
+            document.querySelector('#do2').innerText="♥도경수 세상에서 제일 잘생김♥";
+            document.querySelector('#do2').style.color="powderblue";
+            document.querySelector('#do2').style.fontSize="50px";
+        }
+        function onOut(){
+            document.querySelector("#do2").style.color="black";
+            document.querySelector("#do2").innerText="도경수";
+            document.querySelector('#do2').style.fontSize="15px";
+        }
+    </script>
+
+    <!-- 1 onmouseover 속성에서 javascript만 쓰기 -->
+    <p id="iu" onmouseover="document.querySelector('#iu').innerText='아가수';">아이유</p>
+    <!-- 2 onmouseover 속성에서 함수(function) 쓰기 -->
+    <p id="iu2" onmouseover="singer();">아이유</p>
+    <script>
+        function singer(){
+            document.querySelector('#iu2').innerText="♥이지은♥";
+            document.querySelector('#iu2').style.color="lightpink";
+            document.querySelector('#iu2').style.fontSize="50px";
+        }
+    </script>
+
+
+    <!-- 아래 버튼을 클릭하면 id가 result 로 지정된 p요소에 글씨가 출력되게 해보세요. -->
+    <!-- 1 버튼에 onclick 속성에서 javascript만 쓰기 -->
+    <button onclick="document.querySelector('#result').innerText='정말로 누르다니 삐용삐용';">PUSH!</button>
+    <p id="result"></p>
+    <!-- 2 버튼에 onclick 속성에서 함수(function) 쓰기 -->
+    <button onclick="push();">PUSH!</button>
+    <p id="result2"></p>
+    <script>
+        function push(){
+            document.querySelector('#result2').innerText="걸렸다 요놈!";
+        }
+    </script>
+</body>
+</html>
+<!-- on event javascript 영역-->
