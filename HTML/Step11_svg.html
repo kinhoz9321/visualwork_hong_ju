@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step11_svg.html</title>
+</head>
+<body>
+    <h1>이미지를 벡터 그래픽으로 만들어서 사용하기.</h1>
+    <svg width="15em" height="15em" viewbox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+        <!-- viewbox가 없으면 width와 height를 줄였을 때 이미지가 사라짐. -->
+        <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+        <g>
+            <title>background</title>
+            <rect fill="#fff" id="canvas_background" height="602"   width="802" y="-1" x="-1"/>
+            <g display="none" overflow="visible" y="0" x="0"    height="100%" width="100%" id="canvasGrid">
+             <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+            </g>
+        </g>
+        <g>
+         <title>Layer 1</title>
+         <path id="svg_1" d="m444.76525,276.60386c81.22215,-213.81547 399.4532,0 0,274.9056c-399.4532,-274.9056 -81.22215,-488.72106 0,-274.9056z" stroke-width="1.5" stroke="#000" fill="#f9c0e8"/>
+        </g>
+    </svg>
+    <!--
+        svg = 벡터 그래픽
+        벡터 그래픽은 아무리 크기를 키워도 이미지가 깨지지 않는다.
+
+        1) svg 이미지 파일 첨부! - 외부파일첨부
+        2) svg 파일 자체 집어넣기 (코드안에서 svg파일이 만들어짐.)
+        내가 그린 svg파일을 Ctrl+U하면 링크를 복사할 수 있다.
+        그걸 코드로 붙여넣기 하면 파일이 생성됨.
+
+        추천 2)
+        파일 자체를 집어넣으면 어느 화면에서 열든 이미지가 없어지지 않는다.
+        하지만 1)을 하면 이미지가 담긴 폴더나 링크를 다른 컴퓨터에서 찾지 못하면 없는 이미지로 나타난다. 엑박이 뜸. ERR_FILE_NOT_FOUND.
+
+        요즘은 아이콘을 이미지로 만들기 보다는 svg로 만들어서 사용한다.
+        svg로 만들면 css로 크기와 색상을 마음대로 변경할 수 있기 때문.
+        그리고 확대 축소시 이미지도 깨지지 않는다.
+    -->
+</body>
+</html>
