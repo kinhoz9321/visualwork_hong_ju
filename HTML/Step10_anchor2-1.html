@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step10_anchor2-1.html</title>
+    <style>
+        .container{
+            width:90%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        /* 전체 폭을 90%로 설정. 웹브라우저의 크기에 따라 크기가 90%에 맞춰서 변화한다. */
+        .spacer{
+            height:500px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        alert('a 태그의 책갈피 기능을 알아보자!');
+    </script>
+    <!-- 페이지가 로딩되는 시점 한번만 실행되는 javascript -->
+    <div class="container">
+        <h1>a(anchor)의 또 다른 기능</h1>
+        <ul>
+            <li><a href="#one">one</a></li>
+            <li><a href="#two">two</a></li>
+            <li><a href="#three">three</a></li>
+            <!--
+                책갈피 기능. 링크를 클릭하면 id=one, two, three 태그로 이동한다. 
+            -->
+            <li><a href="javascript:alert('힘내!♥');">응원버튼</a></li>
+            <!--
+                *** a 태그 안에 javascript 넣어서 실행시키기! ***
+                - 꼭 script 태그가 아니더라도 javascript가 실행될 수 있다. a 태그만 가능한건가?
+                a 태그 안의 javascript는 링크를 누를 때 마다 실행시킬 수 있다.
+            -->
+            <li><button style=background-color:lightgoldenrodyellow;><a href="javascript:alert('힘내!');">push!</a></button></li>
+            <!--
+                궁금해서 만들어봤다!
+                button 안에 javascript:alert 기능 넣기. 버튼 배경색 바꾸기.
+            -->
+        </ul>
+        <ul>
+            <li><a href="tel:010-0000-0000">전화걸기</a></li>
+            <li><a href="mailto:kinhoz9321@gmail.com">이메일 쓰기</a></li>
+            <!--
+                모바일 기기에서 테스트 가능한 기능
+            -->
+        </ul>
+        <p id="one">one 입니다.</p>
+        <div class="spacer"></div>
+        <p id="two">two 입니다.</p>
+        <div class="spacer"></div>
+        <p id="three">three 입니다.</p>
+        <div class="spacer"></div>
+        </div>
+</body>
+</html>
