@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_Datatype3.html [ object type ]</title>
+</head>
+<body>
+    <script>
+        var num=1;
+        var name="김홍주";
+        var addr="관악구";
+    </script>
+    <!--
+        위의 script는 회원 한명의 정보를 관리하는데 변수(var)가 총 3개가 필요하다.
+
+        하지만 여러 개의 데이터를 하나의 묶음으로 관리할 수 있는 데이터 타입이 있다면 관리가 더 수월해 질 것이다.
+        이 때 사용할 수 있는 것이 *** object type ***
+        
+        * object type을 사용하면 회원 한명의 정보를 관리하는데 변수는 총 1개가 필요하다.
+    -->
+
+    <script>
+        /*
+        object type (객체 타입) = 여러 개의 데이터를 하나의 묶음으로 관리할 수 있는 데이터 타입
+        *** [ 순서가 없는 데이터 ]를 관리하고 싶을 때는 object type을 사용한다. (중괄호 안에는 순서가 없다.)
+        */
+        var mem1={num:1, name:"김홍주", addr:"노량진"};
+        var mem2={num:2, name:"하늘", addr:"남구"};
+        var mem3={num:num, name:name, addr:addr};
+        var info1={empno:8000, ename:"SMITH", sal:5000};
+    </script>
+
+    <script>
+        //object type의 특정방을 참조해서 불러오기
+        var a=mem1.num;
+        var b=mem2.name;
+        var c=mem3.addr;
+    </script>
+
+    <script>
+        //object type의 특정방을 참조해서 수정하기
+        mem1.num=999;
+        mem2.name="강아지";
+
+        /*
+        *** 중요! ***
+        대입연산자의 좌측에서 참조하면 우측에 있는 값이 좌측에 들어간다. (대입연산자의 특성 이용)
+        */
+    </script>
+
+    <script>
+        //object type의 특정 방을 참조해서 함수에 바로 사용하기
+        alert(mem2.addr);
+    </script>
+</body>
+</html>
+<!--
+    object type 
+    console 창에서 각각의 방(키값)을 참조하는 방법
+    (*** object타입은 "."을 찍어서 불러온다. ***)
+    ex) mem1.num, mem1.name, mem2.num, info1.empno, info1.ename...
+
+    방을 참조하면 그 방의 값을 불러오거나, 수정하거나, 그 방 자체를 삭제할 수 있다.
+-->
