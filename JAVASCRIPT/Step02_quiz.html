@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_quiz.html</title>
+</head>
+<body>
+    <!--
+        button을 누를 때 마다 innerText가 1씩 증가되게 해보세요.
+    -->
+    <button id="countBtn" onclick="increase();">0</button>
+    <script>
+        var count=0;
+        function increase(){
+            count=count+1;
+            document.querySelector("#countBtn").innerText=count;
+        }
+    </script>
+</body>
+</html>
+
+<!--
+    hint!
+    var count=0;
+    function increase(){
+        count=count+1;
+    }
+-->
+
+<!--
+    document.queryselector 에 대해서 제대로 알지 못했다.
+    좀 더 찾아보고 확실히 알기.
+-->
