@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_function(example).html</title>
+</head>
+<body>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+    <button onclick="change();">문장 바꾸기</button>
+    <script>
+        function change(){
+            document.querySelectorAll("div")[0].innerText="hi";
+            document.querySelectorAll("div")[1].innerText="hello";
+            document.querySelectorAll("div")[2].innerText="안녕";
+            document.querySelectorAll("div")[3].innerText="반가워";
+            
+            let five=document.querySelectorAll("div")[4];
+            five.innerText="좋아";
+            five.style.color="green";
+        };
+    </script>
+    <!--
+        querySelector와 querySelectorAll의 차이점
+        맨 처음값 밖에 불러오지 못한다.
+        모든 값을 다 불러올 수 있다.
+
+        보충하기
+    -->
+</body>
+</html>
