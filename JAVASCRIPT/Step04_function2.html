@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_function2.html</title>
+</head>
+<body>
+    <h1>function 테스트 중</h1>
+    <!--
+        수업 때 만들었던 함수 이용 알림 버튼
+    -->
+    <input type="text" id="inputName" placehorder="이름입력">
+    <button onclick="enter();">입장하기</button><br/>
+    
+    <script>
+        function enter(){
+        var name=document.querySelector("#inputName").value;
+        welcome(name);
+        function welcome(a){
+            alert(a+" 님 환영합니다.");
+        }
+    };
+    </script>
+
+    <!--
+        내가 개인적으로 만들어본 함수 이용 이너텍스트 버튼
+    -->
+    <input type="text" id="inputName2" placehorder="이름입력">
+    <button onclick="enter2();">프린트하기</button>
+    
+    <script>
+        function enter2(){
+        var name=document.querySelector("#inputName2").value;
+        document.querySelector("#text").innerText=name;
+    };
+    </script>
+    
+    <div id="text" style="color: cornflowerblue;">이곳에 글자가 나타나요!</div>
+</body>
+</html>
