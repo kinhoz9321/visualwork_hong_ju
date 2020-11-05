@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_boolean.html</title>
+</head>
+<body>
+    <h1>boolean type 테스트</h1>
+    <p id="info"></p>
+    <script>
+        let isFirst=confirm("첫방문이면 확인을 누르세요");
+
+        if(isFirst){
+            document.querySelector("#info").innerText="첫방문을 환영합니다!";
+        }
+        //if(isFirst==true) = if(isFirst)
+    </script>
+</body>
+</html>
+<!--
+    if = 예약어
+    confirm = 내장함수
+    확인과 취소 두 가지의 버튼이 담겨서 클라이언트가 선택을 할 수 있게 만든다.
+
+    확인 = true
+    취소 = false
+    결과의 값에 따라 웹브라우저의 반응이 달라지게 만듬.(조건문 사용)
+    사용예시) 송금하시겠습니까? 페이지를 이동하시겠습니까? 등...
+
+    * 단일 if문
+    if(){
+
+    }
+    - if문의 기본동작
+    if(true)가 참조되면 수행을 한다.
+    if(false)가 참조되면 수행을 안하고 건너뛴다. (true 부분을 무시함.)
+    
+    * true/false의 사용 때문에 boolean type 데이터가 필요 *
+    boolean type 데이터는 if문과 함께 많이 쓰인다.
+    if 문의 어떤 코드 블럭을 조건부로 수행하고 싶을 때 사용.
+-->

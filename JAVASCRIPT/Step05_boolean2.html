@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_boolean2.html</title>
+</head>
+<body>
+    <h1>boolean 테스트 중</h1>
+    <p id="info"></p>
+    <script>
+        let isMan=confirm("남자이면 확인을 누르세요.");
+
+        if(isMan==true){
+            document.querySelector("#info").innerText="당신은 남자이군요."
+        };
+        if(isMan==false){
+            document.querySelector("#info").innerText="당신은 여자이군요."
+        }
+    </script>
+    <!--
+        * 위의 if문을 if~else문으로 바꾸기 *
+        if(isMan){
+            document.querySelector("#info").innerText="당신은 남자이군요.";
+        }else{
+            document.querySelector("#info").innerText="당신은 여자이군요.";
+        };
+        if=그렇다면, else=그렇지 않다면
+    -->
+</body>
+</html>
+<!--
+    boolean type 조건문의 변수명을 지을 때는
+    대화식으로 지으면 가독성이 좋아진다.
+    ex) isWait(만일 기다릴거라면), isRun(만일 달릴거라면)
+    변수명은 중요하고 어렵다. 변수명을 잘 짓는 연습이 필요.
+
+    *if~else문 
+    사용예시)로그인 처리
+
+    TIP!
+    어떤 웹이나 앱을 만들 때 내가 작성한 코드에 대한 테스트는 하나를 만들면 그때그때 확인하는 편이 좋다!
+-->

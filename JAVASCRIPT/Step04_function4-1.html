@@ -43,19 +43,44 @@
 
     <script>
         /* object type을 return 해주는 함수 */
+        /* 1 */
         function d(){
             console.log("d() 함수 호출됨");
             let obj={num:1, name:"김구라", addr:"노량진"};
             return obj;
         }
+        /*
+        * d( );를 호출하면 object의 참조값이 호출되고, d( );는 호출될 때 마다 object의 참조값을 새로 만들어서 return 해준다. 
+        { }중괄호를 열고 닫을 때 마다 object가 만들어지기 때문.
 
-        /* 회원 목록을 array로 return 하는 함수 */
+        *** plain object type 만 같고 참조값(stack 영역에 들어가는 번호)는 계속 달라진다.
+        */
+
+
+
+        /* 2 */
+        // 만약 같은 참조값의 object를 계속 return 하고 싶다면?
+        let obj={num:1, name:"김구라", addr:"노량진"}; //ex)참조값 20
+        function f(){
+            console.log("d() 함수 호출됨");
+            return obj;
+        }
+        /*
+        return 되는 object를 함수 밖에 만들어 두면 이미 만들어진 값(20)을 function에서 return 하기 때문에 같은 참조값만 반복되서 호출된다.
+
+        * 함수 안에서 바깥영역에 정의된 것을 얼마든지 사용할 수 있다.
+         */
+        
+
+
+        /* array type을 return 해주는 함수 */
         function e(){
             console.log("e() 함수 호출됨");
             let array=["김구라","해골","원숭이","주뎅이"];
             return array;
         }
 
+        /* 회원 목록을 array로 return 하는 함수 */
         function getData(){
             let data=[
                 {num:1, name:"김구라", isMan:true},
@@ -64,12 +89,26 @@
             ];
             return data;
         };
+        /*
+        return data; = array 안의 참조값을 가져온다.
+        그 안에는 object type의 key가 순서대로 있음 ex)[0,1,2]
+        호출방법 ex) getData()[0] / getData()[0].num ...
+
+        *** 배열 안에 오브젝트가 있는 타입 ***
+        */
     </script>
 </body>
 </html>
 <!--
-    javascript의 함수는 리턴값을 반드시 되돌려준다.
+    javascript의 함수는 리턴값을 * 반드시 * 되돌려준다.
     아무것도 없으면 undefined로 되돌아온다.
     return이라는 예약어는 어떤 값을 돌려줄 때 사용을 한다.
     모든 데이터 타입을 돌려줄 수 있다.
+
+    *** array 안에 object 가 있는 타입***
+    - 자주 사용.
+    - ex) 회원목록, 글목록, 상품목록 등...
+
+    *** return의 이름이 뭘 가리키는지 자세히 보기. ***
+    - return 이 가리키는 값으로 함수가 대체된다.
 -->
