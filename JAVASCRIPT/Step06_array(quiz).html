@@ -40,6 +40,7 @@
         document.querySelector("#myDiv").append(p1);
         */
 
+        //for문 사용
         function printToList(){
             for(i=0; i<names.length; i++){
                 let li1=document.createElement("li");
@@ -47,6 +48,16 @@
 
                 document.querySelector("#nameList").append(li1);
             };
+        };
+
+        //forEach문 사용
+        function printToList2(){
+            document.querySelector("#nameList").innerText="";
+            names.forEach(function(item){
+                let li1=document.createElement("li");
+                li1.innerText=item;
+                document.querySelector("nameList").append(li1);
+            })
         };
     </script>
 </body>
