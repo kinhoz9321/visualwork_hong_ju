@@ -40,7 +40,6 @@
         document.querySelector("#myDiv").append(p1);
         */
 
-        //for문 사용
         function printToList(){
             for(i=0; i<names.length; i++){
                 let li1=document.createElement("li");
@@ -50,7 +49,6 @@
             };
         };
 
-        //forEach문 사용
         function printToList2(){
             document.querySelector("#nameList").innerText="";
             names.forEach(function(item){
@@ -62,21 +60,3 @@
     </script>
 </body>
 </html>
-
-<!--
-    코드가 안써지면 꼭 주석을 써보기 (주석으로 순서를 생각해보기)
-
-    * document.createElement("요소명") 
-    = 자바스크립트를 이용하여 문서에 HTML 요소를 추가할 수 있는 함수
-    ex)
-    - let p1=document.createElement("p");
-    undefined
-    - p1
-    <p>​</p>​
-
-    * document.querySelector(부모 요소의 참조값).append(자식 요소의 참조값);
-    = 부모 요소에 자식 요소를 집어넣는 함수
-    ex)
-    document.querySelector("#myDiv").append(p1);
-    id=myDiv라는 div 요소에 p1이라는 변수명을 가진 p요소를 집어넣는다. 
--->

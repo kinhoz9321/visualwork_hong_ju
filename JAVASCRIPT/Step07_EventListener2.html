@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step07_EventListener2.html</title>
+    <style>
+        .wrapper{
+            width:500px;
+            height:500px;
+            border:1px solid red;
+            cursor:crosshair;
+        }
+    </style>
+</head>
+<body>
+    <h1>EventListener 테스트 중</h1>
+    <div class="wrapper" id="myDiv">
+
+    </div>
+    <!-- div 박스 안에 이벤트 이용해서 좌표 나오게 만들기 -->
+    <script>
+        document.querySelector("#myDiv").addEventListener("mousemove", function(event){
+            console.log("mousemove!");
+            console.log(event);
+            let info=`x 좌표:${event.offsetX} y 좌표:${event.offsetY}`;
+            this.innerText=info;
+        });
+    </script>
+</body>
+</html>
