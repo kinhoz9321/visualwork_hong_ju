@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step07_EventListener(quiz).html</title>
+    <style>
+        .box{
+            width:100px;
+            height:100px;
+            background-color: lavenderblush;
+            border: 1px solid purple;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <h1>EventListener 테스트 중</h1>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <script>
+        /* 
+        네모칸을 클릭하면 click! 이라는 글이 네모칸 안에 뜨게 만들기. 20개 전부! 
+        
+        hint
+        1. for
+        2. document.querySelectorAll("div")[i].addEventListener();
+        3. this.innerText="clicked";
+        */
+
+        /* 1 */
+        // 홍주 풀이
+        for(let i=0; i<document.querySelectorAll("div").length; i++)[
+        document.querySelectorAll("div")[i]
+            .addEventListener("click",function(){
+                document.querySelectorAll("div")[i].innerText="click!";
+            })
+        ];
+        
+        /* 2 */
+        // 홍주 풀이 + 변수 사용
+        let divAll=document.querySelectorAll("div")
+
+        for(let i=0; i<divAll.length; i++)[
+        divAll[i]
+            .addEventListener("click",function(){
+                divAll.innerText="click!";
+            })
+        ];
+
+        /* 3 */
+        // 강사님 풀이
+        for(let i=0; i<20; i++)[
+            document.querySelectorAll("div")[i]
+                .addEventListener("click",function(){
+                    document.queryselectorAll[i].innerText="click!";
+                })
+        ];
+
+        /* 4 */
+        // 지역 변수 사용 풀이
+        (function(){
+            for(let i=0; i<document.querySelectorAll("div").length; i++)[
+                document.querySelectorAll("div")[i]
+                    .addEventListener("click",function(){
+                        document.querySelectorAll("div")[i].innerText="click!";
+                })
+            ]; 
+        })();
+    </script>
+</body>
+</html>
