@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step07_EventListener5.html</title>
+    <style>
+        canvas{
+            border:1px solid brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>그림판 만들기1 코드정리</h1>
+    <canvas id="myCanvas" width="500" height="500"></canvas><br/>
+    <p>색 선택 : <input type="color" id="inputColor"/></p>
+    <script>
+        let canvas=document.querySelector("#myCanvas");
+        let context=canvas.getContext("2d");
+
+        context.lineWidth=10;
+        context.lineCap="round";
+        context.lineJoin="round";
+
+        let color="black";
+
+        context.strokeStyle=color;
+
+        let isDraw=false;
+
+        canvas.addEventListener("mousedown", function(event){
+            isDraw=true;
+
+            let x=event.offsetX;
+            let y=event.offsetY;
+
+            context.beginPath();
+            context.moveTo(x,y);
+            context.strokeStyle=color;
+        });
+
+        canvas.addEventListener("mousemove", function(event){
+            if(isDraw==true){
+                let x=event.offsetX;
+                let y=event.offsetY;
+                context.lineTo(x,y);
+                context.stroke();
+            }
+        });
+
+        canvas.addEventListener("mouseup", function(){
+            isDraw=false;
+        });
+
+        document.querySelector("#inputColor")
+            .addEventListener("change", function(){
+                color=this.value;
+            });
+    </script>
+</body>
+</html>

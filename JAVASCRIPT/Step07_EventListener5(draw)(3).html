@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step07_EventListener5(draw)(4).html</title>
+    <style>
+        canvas{
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>★그림판 만들기3★</h1>
+    <!--
+        기능
+        - 선의 굵기 선택 가능
+        - 선의 색상 선택 가능
+        - 배경색 선택 및 채우기 가능
+        - 체크박스 눌러서 지우개 기능 가능
+    -->
+    <!-- 1 -->
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <input type="color" id="inputColor">
+    <!-- 2 -->
+    <select id="lineWidth">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option selected>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+    </select>
+    <button id="fillBackBtn">배경색 채우기</button>
+    <!-- 3 -->
+    <label>
+        지우개 기능 <input type="checkbox" id="eraseCheck">
+    </label>
+
+    <script>
+        let canvas=document.querySelector("#myCanvas");
+        let context=canvas.getContext("2d");
+
+        let currentWidth=5;
+
+        context.lineCap="round";
+        context.lineJoin="round";
+
+        let color="black";
+
+        context.strokeStyle=color;
+
+        /* 그림을 그리는 상태인지 지우는 상태인지 여부
+        false = 그림을 그리는 상태, true = 그림을 지우는 상태
+        */
+        let isMouseDown=false;
+        let isErase=false;
+
+        canvas.addEventListener("mousedown", function(event){
+            isMouseDown=true;
+
+            let x=event.offsetX;
+            let y=event.offsetY;
+
+            context.beginPath();
+            context.moveTo(x,y);
+            context.strokeStyle=color;
+            context.lineWidth=currentWidth;
+        });
+
+        /*
+        if(isErase) - 지우는 작업 상태이면
+        else - 지우는 작업 상태가 아니면
+        */
+        canvas.addEventListener("mousemove", function(event){
+            if(isMouseDown==true){
+                let x=event.offsetX;
+                let y=event.offsetY;
+                if(isErase){
+                    context.clearRect(x, y, 10, 10);
+                }else{
+                    context.lineTo(x, y);
+                    context.stroke();
+                }
+            }
+        });
+
+        /*
+        더 이상 작업(그림 or 지우기)하지 않도록 상태값을 바꿔준다.
+        */
+        canvas.addEventListener("mouseup", function(){
+            isMouseDown=false;
+        });
+
+        document.querySelector("#inputColor")
+            .addEventListener("change", function(){
+                color=this.value;
+        });
+
+        document.querySelector("#lineWidth")
+            .addEventListener("change", function(){
+                currentWidth=this.value;
+        });
+        
+        document.querySelector("#fillBackBtn")
+            .addEventListener("click", function(){
+                context.fillStyle=color;
+                context.fillRect(0, 0, 500, 500);
+        });
+        
+        /*
+        체크박스의 체크 상태가 바뀌었을 때 호출되는 함수 등록
+        */
+        document.querySelector("#eraseCheck")
+            .addEventListener("change", function(){
+            //체크여부를 (true of false) 변수에 담는다.
+            isErase=this.checked;
+            //지우는 상태 여부에 따라 커서의 모양을 바꿔준다.
+            if(isErase){
+                document.querySelector("#myCanvas").style.cursor="not-allowed";
+            }else{
+                document.querySelector("#myCanvas").style.cursor="crosshair";
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step07_EventListener5.html</title>
+    <style>
+        canvas{
+            border:1px solid brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>★그림판 만들기1★</h1>
+    <!--
+        기능
+        - 선의 굵기 10 고정
+        - 선의 색상 선택 가능
+    -->
+    
+    <canvas id="myCanvas" width="500" height="500"></canvas><br/>
+    <input type="color" id="inputColor"/>
+
+    <script>
+        /* canvas 요소의 참조값 얻어오기 (변수에 담기) */
+        let canvas=document.querySelector("#myCanvas");
+        /* canvas context(도구)의 참조값 얻어오기 ( 변수에 담기) */
+        let context=canvas.getContext("2d");
+
+        context.lineWidth=10; //lineWidth = 선의 굵기
+        context.lineCap="round"; //lineCap = 선의 시작과 끝을 둥글게 디자인하기
+        context.lineJoin="round"; //lineJoin = 선의 교차점을 둥글게 만들기
+
+        /* 선의 색상을 저장할 변수를 만들고 (let color) 색상을 "black"으로 초기화 */
+        let color="black";
+
+        /* strokeStyle = 도형의 윤곽선 색을 설정 */
+        context.strokeStyle=color;
+
+        /* 그림 그리기의 초기값 = false (mousedown이 되면 그림을 그려야 한다.) */
+        let isDraw=false;
+
+        canvas.addEventListener("mousedown", function(event){
+            /* 그림 그리기 on */
+            isDraw=true;
+
+            /* 그림을 그릴 위치 (mousedown 이벤트가 일어난 곳의 좌표) */
+            let x=event.offsetX;
+            let y=event.offsetY;
+
+            context.beginPath();
+            context.moveTo(x,y);
+            context.strokeStyle=color;
+        });
+
+        canvas.addEventListener("mousemove", function(event){
+            if(isDraw==true){
+                let x=event.offsetX;
+                let y=event.offsetY;
+                context.lineTo(x,y);
+                context.stroke();
+            }
+        });
+
+        canvas.addEventListener("mouseup", function(){
+            isDraw=false;
+        });
+
+        document.querySelector("#inputColor")
+            .addEventListener("change", function(){
+                color=this.value;
+            });
+        /*
+        document.querySelector("#inputColor")=this(이벤트가 일어난 요소)
+        color = 글로벌 영역 변수
+        */
+    </script>
+</body>
+</html>
+<!--
+    글로벌 영역 / 로컬 영역
+    각자의 위치에 만들어진 변수, 함수 구분 하기.
+    
+    함수 안(로컬 영역)에서 함수 바깥(글로벌 영역)에 정의된 것들을 참조하고 있다.
+    함수 바깥 영역의 변수를 참조해서 그 기능을 사용하기도 하고, 함수 내부 영역에서 일어난 이벤트만 이용해서 기능을 사용하기도 한다.
+
+    함수 바깥에 만들어진 것들 = 공통자원(공통적으로 참조할 것)
+    공통자원은 바깥에 정의해야 한다.
+
+    event = 함수가 호출될 때마다 사용하려고 만든 것 (내부 event)
+-->

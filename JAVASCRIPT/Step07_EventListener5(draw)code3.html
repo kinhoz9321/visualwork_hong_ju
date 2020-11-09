@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step07_EventListener5(draw)(4).html</title>
+    <style>
+        canvas{
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>그림판 만들기3 코드정리</h1>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <input type="color" id="inputColor">
+    <select id="lineWidth">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option selected>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+    </select>
+    <button id="fillBackBtn">배경색 채우기</button>
+    <label>
+        지우개 기능 <input type="checkbox" id="eraseCheck">
+    </label>
+
+    <script>
+        let canvas=document.querySelector("#myCanvas");
+        let context=canvas.getContext("2d");
+
+        let currentWidth=5;
+
+        context.lineCap="round";
+        context.lineJoin="round";
+
+        let color="black";
+
+        context.strokeStyle=color;
+
+        let isMouseDown=false;
+        let isErase=false;
+
+        canvas.addEventListener("mousedown", function(event){
+            isMouseDown=true;
+
+            let x=event.offsetX;
+            let y=event.offsetY;
+
+            context.beginPath();
+            context.moveTo(x,y);
+            context.strokeStyle=color;
+            context.lineWidth=currentWidth;
+        });
+
+        canvas.addEventListener("mousemove", function(event){
+            if(isMouseDown==true){
+                let x=event.offsetX;
+                let y=event.offsetY;
+                if(isErase){
+                    context.clearRect(x, y, 10, 10);
+                }else{
+                    context.lineTo(x, y);
+                    context.stroke();
+                }
+            }
+        });
+
+        canvas.addEventListener("mouseup", function(){
+            isMouseDown=false;
+        });
+
+        document.querySelector("#inputColor")
+            .addEventListener("change", function(){
+                color=this.value;
+        });
+
+        document.querySelector("#lineWidth")
+            .addEventListener("change", function(){
+                currentWidth=this.value;
+        });
+        
+        document.querySelector("#fillBackBtn")
+            .addEventListener("click", function(){
+                context.fillStyle=color;
+                context.fillRect(0, 0, 500, 500);
+        });
+        
+        document.querySelector("#eraseCheck")
+            .addEventListener("change", function(){
+            isErase=this.checked;
+            
+            if(isErase){
+                document.querySelector("#myCanvas").style.cursor="not-allowed";
+            }else{
+                document.querySelector("#myCanvas").style.cursor="crosshair";
+            }
+        });
+    </script>
+</body>
+</html>
