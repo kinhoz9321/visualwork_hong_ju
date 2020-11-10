@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement2.html</title>
+    <style>
+        .my-class{
+            background-color: lemonchiffon;
+            color: lightblue;
+        };
+    </style>
+</head>
+<body>
+    <h1>원하는 요소를 동적으로 만들기 연습</h1>
+    <button id="makeBtn">만들기</button>
+    <div id="one">
+
+    </div>
+    <script>
+        document.querySelector("#makeBtn")
+            .addEventListener("click", function(){
+                let p1=document.createElement("p");
+                p1.setAttribute("class","my-class"); //기억하기
+                p1.innerText="p1 요소입니다."
+                document.querySelector("#one").append(p1);
+            });
+    </script>
+</body>
+</html>

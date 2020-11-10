@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addevent4(q).html</title>
+    <style>
+        .box{
+            width:100px;
+            height:100px;
+            background-color: lavenderblush;
+            border: 1px solid purple;
+            float:left;
+        }
+    </style>    
+</head>
+<body>
+    <h1>EventListener 테스트 중</h1>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <script>
+        /*
+        네모칸을 클릭하면 click! 이라는 글이 네모칸 안에 뜨게 만들기. 20개 전부!
+        */
+        for(let i=0; i<document.querySelectorAll("div").length; i++){
+            document.querySelectorAll("div")[i]
+                .addEventListener("click", function(){
+                    this.innerText="click!";
+                });
+        };
+    </script>
+</body>
+</html>
