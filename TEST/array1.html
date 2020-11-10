@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array1.html</title>
+</head>
+<body>
+    <script>
+        var names=["김구라", "해골", "원숭이", "주뎅이", "덩어리"];
+        var nums=[10, 20, 30, 40];
+
+        var a=names[0];
+        var b=names[1];
+        var c=nums[0];
+        var d=nums[1];
+        /* 
+        헷갈리지 말기 
+        var b="해골", var c=10
+        변하지 않는다.
+        */
+
+        var names2=names;
+
+        names[1]="인간";
+        nums[0]=100;
+    </script>
+</body>
+</html>

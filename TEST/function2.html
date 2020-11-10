@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function2.html</title>
+</head>
+<body>
+    <h1>function 테스트 중</h1>
+
+    <button onclick="keepbeer();">맥주 보관창고1</button>
+    <button onclick="keepbeer2();">맥주 보관창고2</button>
+    <button onclick="person.keepbeer();">맥주 보관창고3</button>
+
+    <script>
+        function keepbeer(){
+            console.log("냉장고 문을 연다.");
+            console.log("맥주를 넣는다.");
+            console.log("냉장고 문을 닫는다.");
+        };
+
+        function keepbeer2(){
+            console.log("냉장고 문을 연다.");
+            console.log("맥주를 넣는다.");
+            console.log("냉장고 문을 닫는다.");
+        };
+
+        /* 오브젝트 안에 함수를 넣었다. */
+        var person={
+            name:"김구라",
+            keepbeer:function(){
+                console.log("냉장고 문을 닫는다.");
+                console.log("맥주를 넣는다.");
+                console.log("냉장고 문을 닫는다.");
+            }
+        };
+    </script>
+</body>
+</html>
