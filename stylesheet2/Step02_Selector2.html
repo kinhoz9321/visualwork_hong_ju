@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_Selector2.html</title>
+    <style>
+        /*div{
+            padding: 10px;
+			background-color: #000;
+			color: #fff;
+        }*/
+
+        /*.animals{
+			padding: 10px;
+			background-color: #000;
+			color: #fff;
+		}*/
+		
+		/* div 요소 이면서 클래스 속성값이 animals 인 요소 선택*/
+		div.animals{
+			padding: 10px;
+			background-color: #000;
+			color: #fff;
+		}
+
+    </style>
+</head>
+<body>
+    <div class="animals">
+        <h2>Dog</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium molestias deleniti sequi, voluptatum error quibusdam obcaecati ratione. Adipisci aliquid alias quis quidem aut? Fugit tempore praesentium magnam! Nam, aperiam nostrum!</p>
+    </div>
+
+    <div class="animals">
+        <h2>Cat</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim doloremque quisquam nulla iste adipisci quod. Ipsam enim saepe perspiciatis aperiam ducimus sint rerum, expedita ipsum, eveniet cum aspernatur odio aliquid!</p>
+    </div>
+
+    <div class="friends">
+        <h2>김구라</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero iusto magnam facere iste minus ipsum ab quaerat neque, quisquam, placeat fuga nostrum iure dolore. Cum nulla sunt deserunt inventore repellendus.</p>
+    </div>
+
+    <p class="animals">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quisquam amet temporibus ex voluptatem consectetur. Vero sint excepturi odit molestias sed delectus doloribus veritatis nisi minima, aliquid ipsam aspernatur voluptate?</p>
+</body>
+</html>
+<!--
+    * 선택자를 붙여서 쓰면 and 조건으로 문서를 선택한다.
+
+    div.animals : 요소명이 div 이면서 클래스명이 animals
+    p.friends : 요소명이 p 이면서 클래스명이 friends
+    div.a.b : 요소명이 div 이고 클래스명이 a 와 b
+    .a.b : 클래스명이 a와 b
+
+    * 자식요소와 자손요소 클래스 찾기 다른 점
+    자식요소 : div.animals div
+    특정 요소의 직계 자식만 선택하는 선택자
+
+    자손요소 : div .animals 요소명과 클래스명 사이를 한칸 띄운다.
+    자식, 손자 그리고 그 이후에 오는 후손까지 모두 포함하는 선택자
+-->
