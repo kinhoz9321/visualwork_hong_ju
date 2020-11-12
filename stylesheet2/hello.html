@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello.html</title>
+
+    <!-- 외부(external) CSS 로딩하기 -->
+    <link rel="stylesheet" href="./custom.css">
+
+    <!-- 내부(internal) CSS 영역 -->
+    <style>
+        /*
+        선택자 { 
+            attribute name : value; 
+        };
+
+        내부 CSS를 사용할 때는 어디에 속성을 적용할지 웹브라우저에게 알려야하기 때문에
+        * 선택자를 꼭 지정 * 해줘야 한다.
+        이 때 속성값은 정해진대로 쓰기도 하고 마음대로 쓰기도 한다.
+        마음대로 쓰는 것 ex) 크기
+        */
+
+        div{
+            margin:10px;
+            color:indianred;
+            background-color:khaki;
+            /* 배경색은 padding 영역까지 칠해진다. */
+        };
+
+        p{
+            color:lightblue;
+        };
+    </style>
+
+</head>
+<body>
+    <div>CSS를 배워보자!</div>
+
+    <!-- 
+        * inline CSS 영역 * 
+        적용할 요소에 직접 CSS를 작성하기 때문에 선택의 문제가 일어나지 않는다.
+    -->
+
+    <div style="background-color: darkseagreen;">CSS를 배워보자!</div>
+
+    <div>CSS를 배워보자!</div>
+    <div>CSS를 배워보자!</div>
+
+    <!-- 외부 css 파일에 코딩 -->
+    <p>p1 입니다.</p>
+</body>
+</html>
+<!--
+    CSS 작성법 3가지
+    1. inline
+    2. internal 내부
+    3. external 외부
+
+
+-->
