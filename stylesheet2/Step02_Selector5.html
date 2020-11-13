@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_Selector5.html</title>
+    <style>
+        /*class container 의 자손요소 p 선택 (p요소 2가지 선택) */
+        .container p{
+            color:teal;
+        }
+
+        /* class container 의 자식요소 p 선택 */
+        .container>p{
+            background-color: antiquewhite;
+        }
+        /* class container 의 자식요소 class sub 선택 class sub의 자식요소 p 선택 (구체적 선택) */
+        .container > .sub > p{
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque architecto, ea veniam nobis dolor nam, est perspiciatis, iste earum dolore aut asperiores nemo libero optio accusantium. Alias beatae consectetur assumenda!</p>
+        <div class="sub">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione autem dolores cupiditate exercitationem quidem numquam nesciunt tempora explicabo necessitatibus officia inventore pariatur harum incidunt nostrum at, quaerat officiis accusamus eaque.</p>
+        </div>
+    </div>
+</body>
+</html>

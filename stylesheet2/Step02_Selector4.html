@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_Selector4.html</title>
+    <style>
+        #one li{
+            color:yellow;
+        }
+        .container li{
+            background-color: lightsalmon;
+        }
+    </style>
+    <!--
+        div.container의 자손요소 li는 li요소 전부를 지칭한다.
+        div가 제일 큰 카테고리의 요소이기 때문에.
+
+        #one(ul) li는 id를 one으로 가진 ul안에 있는 자손요소 li를 지칭한다. (김구라, 해골)
+    -->
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>하나</li>
+            <li>두울</li>
+        </ul>
+        <hr/> <!-- hr : 수평 구분선 -->
+        <ul id="one">
+            <li>김구라</li>
+            <li>해골</li>
+        </ul>
+    </div>
+</body>
+</html>
