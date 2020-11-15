@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_Border2.html</title>
+    <style>
+        table{
+            width:100%;
+            border:10px solid red;
+            border-collapse: collapse;
+        }
+        table td{
+            border: 1px solid green;
+            padding: 0px 20px;
+        }
+        /* table의 빨간 선만 사라지게 함 */
+        table.none{
+            border-style:none;
+        } 
+        /* table의 빨간선과 table td의 가장자리 네 면의 초록선까지 사라지게 함 */
+        table.hidden{
+            border-style:hidden;
+        }
+    </style>
+    <!--
+        <border style none과 hidden의 차이>
+        none : hidden 키워드와 마찬가지로 테두리를 표시하지 않는다. 
+        표에서 칸의 테두리 상쇄시 none은 * 제일 낮은 우선순위 * 를 가진다. 
+        따라서 주변칸이 테두리를 가진다면 테두리를 그린다. 
+        border-width에서 설정된 값을 0으로 만듬.
+
+        hidden : none 키워드와 마찬가지로 테두리를 표시하지 않는다. 
+        표에서 칸의 테두리 상쇄 시 hidden은 * 제일 높은 우선순위 * 를 가진다. 
+        따라서 주변 칸이 테두리를 가지더라도 그리지 않는다. 
+        none과 같으나 테이블의 셀 요소라면 테두리를 통합한다. 
+    -->
+</head>
+<body>
+    <h1>border-style: none;</h1>
+    <table class="none">
+        <tr>
+            <td>
+                <p>Lorem</p>
+            </td>
+            <td>
+                <p>Ipsum</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Dolor</p>
+            </td>
+            <td>
+                <p>Amet</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Phasellus</p>
+            </td>
+            <td>
+                <p>Mauris</p>
+            </td>
+            </tr>
+    </table>
+
+    <h1>border-style: hidden;</h1>
+    <table class="hidden">
+        <tr>
+            <td>
+                <p>Lorem</p>
+            </td>
+            <td>
+                <p>Ipsum</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Dolor</p>
+            </td>
+            <td>
+                <p>Amet</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>Phasellus</p>
+            </td>
+            <td>
+                <p>Mauris</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_Border2.html</title>
+    <style>
+        .none{
+            border:10px none red;
+        }
+        .hidden{
+            border: 10px hidden red;
+        }
+        .dotted{
+            border: 10px dotted red;
+        }
+        .dashed{
+            border: 10px dashed red;
+        }
+        .solid{
+            border: 10px solid red;
+        }
+        .double{
+            border: 10px double red;
+        }
+        /* 테두리가 파인 것 처럼 그림. ridge의 반대. */
+        .groove{
+            border: 10px groove red;
+        }
+        /* 테두리가 튀어나온 것처럼 그림. groove의 반대. */
+        .ridge{
+            border: 10px ridge red;
+        }
+        /* 
+        요소가 파인 것처럼 테두리를 그림. outset의 반대. 
+        border-collapse가 collapsed인 칸에서는 groove와 동일하다.
+        */
+        .inset{
+            border: 10px inset red;
+        }
+        /* 
+        요소가 튀어나온 것처럼 그림. inset의 반대.
+        border-collapse가 collapsed인 칸에서는 ridge와 동일하다.
+        */
+        .outset{
+            border: 10px outset red;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="none">No Border.</h1>
+    <h1 class="hidden">Hidden Border.</h1>
+    <h1 class="dotted">Dotted Border.</h1>
+    <h1 class="dashed">Dashed Border.</h1>
+    <h1 class="solid">Solid Border</h1>
+    <h1 class="double">Double Border.</h1>
+    <h1 class="groove">Groove Border.</h1>
+    <h1 class="ridge">Ridge Border.</h1>
+    <h1 class="inset">Inset Border.</h1>
+    <h1 class="outset">Outset Border.</h1>
+</body>
+</html>
+<!--
+    initial : 기본값으로 설정함.
+    inherit : 부모 요소의 속성값을 상속받음.
+
+    속성값은 1개에서 4개까지 설정할 수 있음.
+    
+    border-style: xx
+    모든 모서리 모양을 xx로 만듬
+
+    border-style: xx yy
+    위쪽과 아래쪽 모서리의 모양은 xx로, 왼쪽과 오른쪽의 모양은 yy로 만듬.
+
+    border-style: xx, yy, zz
+    위쪽 모양은 xx로, 왼쪽과 오른쪽의 모양은 yy로, 아래쪽의 모양은 zz로 만듬.
+
+    border-style: xx, yy, zz, ww
+    위쪽 모양은 xx로, 오른쪽 모양은 yy로, 아래쪽 모양은 zz로, 왼쪽 모양은 ww로 만듬.
+
+    위의 설명은 style 이외의 것에도 적용되는 방식.
+-->

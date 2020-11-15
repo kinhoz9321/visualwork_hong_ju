@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step08_PseudoElement.html</title>
+    <style>
+        p:first-letter{
+            font-size: 30px;
+            font-weight: bold;
+            color: red;
+        }
+        #one:first-line{
+            background-color: beige;
+        }
+        .quote:before{
+            content: "▷";
+            color:red;
+        }
+        .quote:after{
+            content: "◁";
+            color: blue;
+        }
+    </style>
+    <!--
+        before content를 추가하면 first-letter 요소 선택도 바뀐다.
+        원래는 Lorem의 L을 선택했었는데 .quote의 '▷' 을 선택한다.
+        어떤 것은 font-weight을 적용하고 어떤 것은 적용하지 않는다.
+    -->
+</head>
+<body>
+    <h1>Pseudo Element (가상요소) 선택자 활용</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae numquam quos eius quisquam impedit, labore natus asperiores mollitia veniam quaerat perspiciatis, dicta vitae harum magni quae nisi inventore, reiciendis explicabo.</p>
+    <p id="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit temporibus aspernatur cum fugit odit quisquam et laborum itaque, quod cumque labore, odio ipsa nostrum sequi blanditiis praesentium explicabo. Voluptatem, earum.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae, accusantium illum hic deleniti cum numquam minus nam non iure quo inventore corporis quod, totam corrupti facilis quidem ea quos dolorum?</p>
+    <p class="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ipsam assumenda laudantium unde hic et provident, amet odio est sed tempore molestias sequi aliquam quas saepe modi consequatur nulla recusandae!</p>
+    <p class="quote">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, eligendi, tenetur atque iure qui velit omnis ullam assumenda repudiandae accusamus illum veniam sunt voluptatum aliquid mollitia. Beatae quasi laborum quibusdam.</p>
+    <p class="quote">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio aliquam quidem eligendi consequuntur aut accusamus dolor nemo quam rem? Quam rem molestias distinctio, sint minus veniam aut a excepturi accusamus!</p>
+</body>
+</html>
+<!--
+    * 가상 요소 선택자 *
+    - 실제 존재하지는 않지만 마치 있는 것처럼 느껴지는 요소
+
+    :before - 선택된 요소 앞에 내용을 생성
+    :after - 선택된 요소의 뒤에 내용을 생성
+    :first-letter - 저장된 셀렉터의 첫번째 문제에 스타일을 추가하는데 사용
+    :first-line - 저장된 셀렉터의 첫번째 줄에 스타일을 추가하는데 사용
+    :selection - 사용자가 선택한 요소의 부분과 일치
+-->

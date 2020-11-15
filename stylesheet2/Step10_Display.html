@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step10_Display.html</title>
+    <style>
+        #one{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <h1>display 속성 테스트</h1>
+    <button id="showBtn">눌러봐!</button>
+    <p id="one">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, fugiat ipsam facere modi harum vero exercitationem maiores, reiciendis doloribus repellendus, rem minus tenetur nihil necessitatibus quae! Perspiciatis excepturi eligendi accusamus?</p>
+    <img src="images/rabbit_1.png"/>
+    <script>
+        document.querySelector("#showBtn").addEventListener("click",function(){
+            document.querySelector("#one").style.display="block";
+        });
+    </script>
+    <!--
+        inline css가 힘이 제일 세기 때문에
+        자바스크립트로 css를 설정하면 대부분 우선순위 1순위가 된다.
+        (!important를 제외하고는) 
+
+        *** 자바스크립트에 inline css 적용하는 법! ***
+        style="display:block" → 참조값.style.dispaly="block";
+    -->
+</body>
+</html>
+<!--
+    display:none;
+    - 문서객체는 만들어져있지만 공간을 차지하지 않고 보이지 않게 하기.
+    - 존재하지만 보이지는 않게 한다. 자리도 차지하지 않는다.
+    보이게 하는 명령어는 그때그때 다르다. 뭐가 보이게 할지에 따라 다르게 명령해야하기 때문이다.
+    ex)
+    block element - display: block;
+    inline element - display: inline;
+
+    * 알아두기 *
+    inline
+    - width, height가 안먹힌다.
+    - 자기자신의 폭만 가진다.
+    - 글자 하나하나처럼 행동한다.
+
+    inline block
+    - 글자처럼 행동하지만 width, height를 다 가질 수 있다.
+
+    table cell
+    td처럼 행동한다.
+    특별한 경우에 쓴다.
+
+    base line
+    글자는 일렬로 나열할 때 base line에 맞춰서 나열한다. 
+    가상의 base line이 있음. 
+
+    윗쪽라인에 맞춰서 정렬도 가능하다. (vertical-align 속성)
+-->

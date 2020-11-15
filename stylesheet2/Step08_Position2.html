@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step07_Position2.html</title>
+    <style>
+    .box{
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+    }
+    .spacer{
+        height: 500px;
+        background-color: gainsboro;
+    }
+    #one{
+        /*
+        원래 있던 곳을 기준으로 위치를 떨어뜨린다.
+        #one의 원래 위치는 static box 아래
+        */
+        position: relative;
+        top: 150px;
+        left: 150px;
+    }
+    #two{
+        /*
+        부모 요소가 position 속성이 없으면 body 기준으로 절대 좌표에 배치된다. (현재 body 기준)
+        */
+        position: absolute;
+        top: 100px;
+        left: 100px;
+    }
+    #three{
+        /*
+        fixed는 window 기준으로 절대 좌표에 배치할 때 사용한다.
+        따라서 스크롤바를 움직여도 window 창 기준으로 항상 같은 위치에 존재한다. (현재 body 기준)
+        */
+        position: fixed;
+        top: 100px;
+        left: 200px;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">static</div>
+    <div class="box" id="one">relative</div>
+    <div class="spacer"></div>
+    <div class="box" id="two">absolute</div>
+    <div class="box">너는 어디?</div>
+    <div class="box" id="three">fixed</div>
+</body>
+</html>
+<!--
+    static : 보통의 일반적인 배치가 적용된다. top, right, bottom, left 속성은 적용되지 않는다.
+
+    relative : 상대적인 위치에 배치된다. 즉 그 엘리먼트의 본래의 위치를 기준으로 배치된다. 위치는 top, right, bottom, left 속성에 의해 지정된다. 뒤에 계속되는 요소의 배치에 영향을 주지 않는다.
+
+    absolute : 절대적인 위치에 배치된다. 즉 포함블럭의 네변을 기준으로 배치된다. 위치는 top, right, bottom, left 속성에 의해 지정된다. 뒤에 계속되는 요소의 배치에 영향을 주지 않는다.
+    - position: static 속성을 * 가지고 있지 않은 부모를 기준 * 으로 움직인다. 만약 부모 중에 포지션이 relative, absolute, fixed인 태그가 없다면 가장 위의 태그(body)가 기준이 됩니다.
+    - absolute가 되면 div여도 더는 width: 100%가 아니다.
+
+    fixed : 고정적인 위치에 배치된다. 브라우저의 스크롤에 의한 영역이동에 대해 고정된다. 또한 인쇄매체에 대해서도 각 페이지의 같은 위치에 인쇄된다. 위치는 top, right, bottom, left 속성에 의해 지정된다. 뒤에 계속되는 요소의 배치에 영향을 주지 않는다.
+    ex)고정시키고 싶은 메뉴등을 나타낼 때 사용
+-->

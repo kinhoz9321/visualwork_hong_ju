@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step10_Display5(example).html</title>
+</head>
+<body>
+    <h1>Display 속성 활용</h1>
+    <button id="hideBtn">숨기기</button>
+    <button id="showBtn">보이기</button>
+    <button id="toggleBtn">토글</button>
+    <br/>
+    <img src="images/rabbit_1.png" id="one"/>
+    <script>
+        /* 숨기기 */
+        document.querySelector("#hideBtn").addEventListener("click", function(){
+            document.querySelector("#one").style.display="none";
+        });
+
+        /* 보이기 */
+        document.querySelector("#showBtn").addEventListener("click",function(){
+            document.querySelector("#one").style.display="inline";
+        });
+
+        /* toggle if문 적용 */
+        document.querySelector("#toggleBtn").addEventListener("click", function(){
+            let image=document.querySelector("#one").style.display;
+            if(image=="none"){
+                document.querySelector("#one").style.display="inline";
+            }else{
+                document.querySelector("#one").style.display="none";
+            };
+        });
+    </script>
+</body>
+</html>

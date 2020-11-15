@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_Float3.html</title>
+    <style>
+        .wrapper{
+            border: 1px solid blue;
+            background-color: beige;
+            overflow: auto;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid red;
+            float: left;
+        }
+        p{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <h1>block 요소를 inline 요소처럼 한줄로 배치</h1>
+    <div class="wrapper">
+        <div class="box">div1</div>
+        <div class="box">div2</div>
+        <div class="box">div3</div>
+        <div class="box">div4</div>
+        <div class="box">div5</div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta quae eligendi veritatis aperiam veniam nihil, ipsum deleniti quam ad quia. Soluta perferendis sit incidunt architecto a excepturi porro, dolorem at.</p>
+    </div>
+        
+</body>
+</html>
+<!--
+    주의깊게 생각할 점!
+    * 부모의 크기는 자식을 포함할 수 있을만큼 가지는 게 정상.
+    하지만 자식이 float 요소를 사용했을 경우 떠있기 때문에 부모요소가 자식요소를 감쌀 수 없음.
+    이 때 사용할 수 있는 게 overflow:auto;
+    overflow: auto를 사용하면 flaot를 사용한 자식요소를 감싸고 배경색도 설정하고 경계선으로 잘 감싸줄 수도 있다.
+
+    p요소가 div 밖에 있으면 clear:both를 설정하든 안하든 결과는 똑같다.
+    하지만 div 안에 있으면 clear:both의 효과를 명확하게 볼 수 있다.
+    그래서 안쪽에 p요소를 두었다.
+
+    * overflow: auto를 본래 이렇게 사용하는 것이 아니다.
+-->

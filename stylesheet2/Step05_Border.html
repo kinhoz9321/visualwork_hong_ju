@@ -17,24 +17,78 @@
             border-style:solid;
             border-color:red;
         }
+
         /* .box안의 css를 한 줄로 작성하면 .box2 */
         .box2{
             border: 10px solid red;
         }
+
+        /* .box3, .box4, .box5 모두 동일한 결과가 나타남 */
         .box3{
-            /* border-width: 10px; 을 풀어서 쓰면 */
+            /* border-width: 10px; 을 풀어서 쓰면 (top-right-bottom-left) */
             border-top-width: 10px;
             border-right-width: 10px;
             border-bottom-width: 10px;
+            border-left-width: 10px;
+
+            /* border-style: dotted; 를 풀어서 쓰면 */
+            border-top-style: dotted;
+            border-right-style: dotted;
+            border-bottom-style: dotted;
+            border-left-style: dotted;
+
+            /* border-color: red; 를 풀어서 쓰면 */
+            border-top-color: red;
+            border-right-color: red;
+            border-bottom-color: red;
+            border-left-color: red;
+        }
+        .box4{
+            border-width: 10px 10px 10px 10px;
+            border-style: dotted dotted dotted dotted;
+            border-color: red red red red;
+        }
+        .box5{
+            border: 10px dotted red;
+        }
+
+        /* 다양한 border-style 비교 */
+        .box6{
+            border-width: 10px 20px 30px 40px;
+            border-style: solid dotted dashed inset;
+            border-color: red green blue pink;
+        }
+
+        /* border-style solid inset outset 비교하기 */
+        /* solid - 일반적인 선. */
+        .box7{
+            border: 10px solid grey;
+        }        
+        .box8{
+            border: 10px inset grey;
+        }
+        .box9{
+            border: 10px outset grey;
         }
     </style>
 </head>
 <body>
-    <div></div>
-    <div class="box">.box</div>
-    <div class="box2">.box2</div>
-    <div class="box3">.box3</div>
-    <div class="box4">.box4</div>
-    <div class="box5">.box5</div>
+    <div></div><br/>
+    <div class="box">.box</div><br/>
+    <div class="box2">.box2</div><br/>
+    <div class="box3">.box3</div><br/>
+    <div class="box4">.box4</div><br/>
+    <div class="box5">.box5</div><br/>
+    <div class="box6">.box6</div><br/>
+    <div class="box7">.box7</div><br/>
+    <div class="box8">.box8</div><br/>
+    <div class="box9">.box9</div><br/>
 </body>
 </html>
+<!--
+    border-width: 경계선의 폭
+    border-style: 경계선의 스타일
+    border-color: 경계선 색상
+
+    top right bottom left 시계방향 순서 기억하기
+-->

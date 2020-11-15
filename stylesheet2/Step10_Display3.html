@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step10_Display3.html</title>
+    <style>
+        /*
+        [ inline 요소 ]
+        - width 와 height 를 지정할 수 없다.
+        - left & right margin, padding 을 가질 수 있다.
+        - top & bottom margin, padding 을 가질 수 없다.
+        - 왼쪽과 오른쪽에 다른 요소가 올 수 있다.
+        - 폭이 부족하면 글자처럼 흘러버린다.
+        - line height : 줄의 높이 간격 조절
+        */
+        #one{
+            border: 1px solid red;
+            display: inline;
+            line-height:100px;
+        }
+        /*
+        [ inline-block 요소 ]
+        - width, height, margin, padding 모두 가능
+        - 왼쪽과 오른쪽에 다른 요소가 올 수 있다.
+        - 하나의 덩어리. 폭이 부족해도 border가 쪼개지지 않는다.
+        */
+        #two{
+            border: 1px solid blue;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>inline vs inline-block</h1>
+    <div id="one">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id at libero alias quas quibusdam esse blanditiis nobis quae, veritatis, hic, velit et eligendi dolore dolores? Ut suscipit nobis enim tenetur!</div>
+    <div id="two">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur beatae tenetur molestiae ullam, nulla harum sunt cupiditate sit? Dolorem architecto modi provident magnam error laborum doloribus deleniti temporibus cupiditate mollitia.</div>
+</body>
+</html>

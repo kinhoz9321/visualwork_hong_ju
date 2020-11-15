@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step10_Display2.html</title>
+    <style>
+        .wrapper{
+            border: 1px solid red;
+        }
+        span{
+            border: 1px solid blue;
+        }
+        #one{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>inline 요소의 display 조작</h1>
+    <button id="showBtn">눌러봐!</button>
+    <div class="wrapper">
+        <span>하나</span>
+        <span id="one">두울</span>
+        <span>세엣</span>
+    </div>
+    <script>
+        document.querySelector("#showBtn").addEventListener("click", function(){
+            document.querySelector("#one").style.display="inline";
+        });
+    </script>
+</body>
+</html>
+<!--
+    inline css의 힘이 더 세기 때문에 스크립트를 실행하면 '두울' 텍스트가 보이게 된다.
+-->
