@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step12_Text2.html</title>
+    <style>
+        div{
+            border: 1px solid red;
+        }
+        #one{
+            text-align: left;
+        }
+        #two{
+            text-align: center;
+        }
+        #three{
+            text-align: right;
+        }
+        .wrapper{
+            /* inline 혹은 inline-block 요소의 가운데 정렬에도 활용할 수 있다. */
+            text-align: center;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: wheat;
+            display: inline-block;
+        }
+        #four{
+            /* 늘리기 */
+            text-align: justify;
+            /* 
+            주어진 폭 안에서 간격을 최대한 맞춘다. 
+            아래의 p요소는 단어별로 끊어서 개행해버린다.
+            */
+        }
+    </style>
+</head>
+<body>
+    <div id="one">김구라</div>
+    <div id="two">해골</div>
+    <div id="three">원숭이</div>
+    <div class="wrapper">
+        <div class="box"></div>
+    </div>
+    <p id="four">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat culpa, error expedita optio, ipsam nesciunt impedit tempore perferendis saepe deserunt rerum, inventore illo facere? Nam, laborum perspiciatis! Earum, odit ullam!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati corrupti consequatur rerum assumenda cum vero iure necessitatibus soluta sed minus. Consectetur id vel maiores sunt optio tempora fugit dignissimos ipsam?</p>
+</body>
+</html>

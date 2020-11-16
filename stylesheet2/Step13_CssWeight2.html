@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step13.CssWeight2.html</title>
+    <!--
+        * CSS 가중치 정리 *
+        1. CSS는 선택자가 상세할수록 가중치가 크다.
+        2. 가중치가 같으면 나중에 정의한 CSS가 적용된다.
+
+        요소명 선택자 가중치 : 1점
+        클래스 선택자 가중치 : 10점
+        아이디 선택자 가중치 : 100점
+
+        인라인 CSS 가중치 : 1000점
+        !important 가중치 : 10000점
+
+        !important 
+        - CSS의 상속을 방지 
+        - 최우선순위 선택자
+        - inline css로 style 속성을 바꿔도 !important로 설정된 것은 바뀌지 않는다.
+    -->
+    <style>
+        li{
+            background-color: yellow;
+        }
+        ul li{
+            background-color: blue;
+        }
+        .active{
+            background-color: green;
+        }
+        li.active{
+            background-color: red;
+        }
+        #one{
+            background-color: pink;
+        }
+        #one{
+            background-color: pink !important;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="nav">
+            <ul>
+                <li id="one" style="background-color: teal;" class="active">
+                    하나
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

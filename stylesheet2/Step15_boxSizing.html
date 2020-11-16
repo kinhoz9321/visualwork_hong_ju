@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step15_boxSizing.html</title>
+    <style>
+        .box{
+            /* 순수 크기 */
+            width: 100px;
+            height: 100px;
+
+            background-color: khaki;
+
+            border: 10px solid red;
+            padding: 10px;
+            margin: 10px;
+
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>box-sizing 속성</h1>
+    <div class="box">.box</div>
+</body>
+</html>
+<!--
+    * box-sizing *
+    content-box (default) : 기본 CSS 박스 크기 결정법을 사용. 요소의 너비를 100 픽셀로 설정하면 콘텐츠 영역이 100 픽셀 너비를 가지고, 테두리와 안쪽 여백은 이에 따로 더해집니다.
+
+    border-box : 테두리와 안쪽 여백의 크기도 요소의 크기로 고려합니다. 너비를 100 픽셀로 설정하고 테두리와 안쪽 여백을 추가하면, 콘텐츠 영역이 줄어들어 총 너비 100 픽셀을 유지합니다. 대부분의 경우 이 편이 크기를 조절할 때 쉽습니다.
+-->

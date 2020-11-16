@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step13_CssWeight.html</title>
+    <style>
+        /* 단계적으로 적용되는 css 법칙 확인하기 */
+        p{
+            background-color: red;
+        }
+        /* 선택자의 가중치(구체성)가 동일하다면 *나중에 정의한 css가 적용* 된다. */
+        p{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p class="myClass">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio commodi quia cum quae nihil exercitationem maiores corporis incidunt ipsa? Eum dolor adipisci repellat porro temporibus incidunt possimus eos obcaecati ad!</p>
+</body>
+</html>
+<!--
+    css의 법칙
+    1. 선택자의 구체성이 높은 것이 우선순위가 높다.
+    2. 선택자의 구체성이 같으면 나중에 정의한 것이 우선순위가 높다.
+-->

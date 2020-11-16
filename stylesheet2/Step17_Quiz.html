@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step17_Quiz.html</title>
+    <style>
+        .wrapper{
+            width: 500px;
+            height: 500px;
+            background-color: orange;
+            position: relative;
+        }
+        /* CSS를 이용해서 .content div를 상하좌우로 정가운데에 위치 시켜보세요. */
+        .content{
+            width: 100px;
+			height: 100px;
+			background-color: blue;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -50px;
+			margin-left: -50px; 
+			/*마이너스를 이용해서 가운데를 맞춰줌*/
+        }
+    </style>
+</head>
+<body>
+    <h1>가운데 정렬 예제</h1>
+    <div class="wrapper">
+        <div class="content"></div>
+    </div>
+</body>
+</html>
+<!--
+    파란박스의 position이 absolute여야 하는 이유
+    - 포함블럭의 네변을 기준으로 배치된다.
+    - static 속성을 * 가지고 있지 않은 부모를 기준 * 으로 움직인다. 만약 부모 중에 포지션이 relative, absolute, fixed인 태그가 없다면 가장 위의 태그(body)가 기준이 된다.
+    - absolute가 되면 div여도 더는 width: 100%가 아니다.
+-->

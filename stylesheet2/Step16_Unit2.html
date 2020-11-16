@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step16_Unit2.html</title>
+    <style>
+        #one{
+            font-size: 16px;
+        }
+        #two{
+            font-size: 1em;
+        }
+        #three{
+            font-size: 2em;
+        }
+        #four{
+            font-size: 3em;
+        }
+        .box{
+            width: 10em;
+            height: 10em;
+            background-color: lemonchiffon;
+            margin-left: 5em;
+            border: 1px solid orange;
+        }
+        .wrapper{
+            font-size: 1em;
+        }
+        .box2{
+            width: 10em;
+            height: 10em;
+            background-color: lemonchiffon;
+            margin-left: 5em;
+            border: 1px solid rgb(136, 124, 209);
+        }
+        .wrapper2{
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>기본 글자의 크기는 16px 이다.</h1>
+    <p>ABCD 글자크기 : 16px</p>
+    <p id="one">one : 16px</p>
+    <p id="two">two : 16px</p>
+    <p id="three">three : 32px</p>
+    <p id="four">four : 48px</p>
+    <div class="box"></div>
+    <div class="wrapper">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
+<!--
+    div가 font-size로 커지는 이유
+    
+    1em=16px
+    em은 글자크기를 기준으로 움직인다.
+    글자크기를 바꾸면 컨텐츠의 크기도 자동으로 바뀐다.
+
+    div내에 폰트에 대한 요소가 없어도 컨텐츠에 자동 상속이 된다.
+    body>wrapper>box 순으로 상속. 
+    중간에 하나가 바뀌면 그 밑이 영향을 받는다. 
+    
+    만약 박스 사이즈를 고정시키고 싶다면 em이 아니라 px 단위를 사용해야한다. 
+-->

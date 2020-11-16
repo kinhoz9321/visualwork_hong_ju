@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step17_Quiz2.html</title>
+    <style>
+        /* 
+        CSS를 이용해서 .content div를 상하좌우 정가운데에 위치 시켜보세요. 
+        ** margin auto 양쪽 위아래 값을 똑같이 하겠다. **
+        */
+        .wrapper{
+            width: 500px;
+			height: 500px;
+			background-color: yellow;
+			position: relative;
+        }
+        .content{
+            width: 100px;
+			height: 100px;
+			background-color: blue;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0; 
+			margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>가운데 정렬 예제</h1>
+    <div class="wrapper">
+        <div class="content"></div>
+    </div>
+</body>
+</html>
