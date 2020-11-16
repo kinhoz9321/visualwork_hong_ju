@@ -25,10 +25,13 @@
 
         /* toggle if문 적용 */
         document.querySelector("#toggleBtn").addEventListener("click", function(){
+            // 현재 display의 value 값을 읽어온다.
             let image=document.querySelector("#one").style.display;
             if(image=="none"){
+                // 보이게 한다
                 document.querySelector("#one").style.display="inline";
             }else{
+                // 안보이게 한다.
                 document.querySelector("#one").style.display="none";
             };
         });
