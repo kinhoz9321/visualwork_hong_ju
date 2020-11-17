@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_form.html</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h1>폼 요소</h1>
+        <form action="loginAction1">
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="email">이메일</label>
+                    <input type="text" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">비밀번호</label>
+                    <input type="password" id="pwd" class="form-control">
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input">
+                        아이디 저장
+                    </label>
+                </div>
+                <button class="btn btn-primary" type="submit">로그인</button>
+                <button class="btn btn-danger" type="reset">취소</button>
+            </div>
+        </form><!--loginAction1-->
+        <h1>칼럼 안의 폼</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6 bg-light">
+                <h2>로그인 폼 입니다. </h2>
+                <form action="loginAction2">
+                    <div class="form-group">
+                        <label for="email">이메일</label>
+                        <input type="text" id="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">비밀번호</label>
+                        <input type="password" id="pwd" class="form-control">
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            아이디 저장
+                        </label>
+                    </div>
+                    <button class="btn btn-primary" type="submit">로그인</button>
+                    <button class="btn btn-danger" type="reset">취소</button>
+                </form><!--loginAction2-->
+            </div>
+        </div>
+        <h1>폼 요소를 한줄에 표시하기</h1>
+        <form action="loginAction3">
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col">
+                        <label for="id">아이디</label>
+                        <input type="text" id="id" class="form-control" placeholder="아이디 입력">
+                    </div>
+                    <div class="col">
+                        <label for="pwd">비밀번호</label>
+                        <input type="password" id="pwd" class="form-control" placeholder="비밀번호 입력">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">이메일</label>
+                <input type="text" id="email" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-secondary">가입</button>
+        </form>
+    </div><!--container-->
+</body>
+</html>
+<!--
+    * 자주 사용되는 class 명 *
+    form-group
+    form-control
+    form-check
+    form-check-label
+    form-check-input
+    btn
+    btn-primary
+-->

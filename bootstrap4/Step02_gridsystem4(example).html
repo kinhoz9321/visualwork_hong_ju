@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_gridsystem4(example).html</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Grid System 사용하기</h1>
+        <div class="row">
+            <div class="col">
+                <h2>첫번째 칼럼 컨텐츠</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur a, nobis modi consequatur accusamus expedita! Reprehenderit officiis est delectus, omnis quo dolorum itaque hic exercitationem praesentium, nisi nihil fuga aliquam?</p>
+                <button class="btn btn-primary">확인</button>
+            </div>
+            <div class="col">
+                <h2>두번째 칼럼 컨텐츠</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dignissimos amet. Quae, provident nemo inventore veniam voluptatem repellendus quisquam, maiores consectetur fugiat ut consequuntur temporibus! Commodi quaerat est iste fugiat!</p>
+                <button class="btn btn-outline-warning">취소</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!--
+    link bootstrap.css로 인해 class명을 어떻게 쓰느냐에 따라 UI가 달라진다.
+    gutter = 간격
+    ( col과 col사이의 간격이 자동으로 30px 떨어진다. )
+
+    - div는 모든 영역에 대해서 같은 비율을 유지한다.
+
+    * 개념잡기 Quiz *
+    
+    <div class="row">
+        <div class="col-md-6 col-sm-6"></div>
+    </div>
+    
+    이중 col-md-6 col-sm-6 중 누가 먼저 적용이 될까?
+
+    - 답은 col-md-6이다. 
+    클래스에 적힌 순서는 상관이 없다. 
+    CSS파일에서 누가 나중에 적용되었는가가 중요하다. 
+    (대부분 크기의 순으로 순서를 정하니 xl 혹은 fluid 가 제일 파워가 셀 경우가 큼.)
+
+    * 문서에서는 외부CSS < 내부CSS < inline CSS 순서만으로 파워를 따진다.
+
+-->

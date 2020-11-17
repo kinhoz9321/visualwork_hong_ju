@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step02_gridsystem2.html</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <style>
+        .row > div{
+            border: 1px dashed green;
+        }
+        .col > img{
+            max-width: 100%;
+        }
+        /*
+        이미지의 최대 폭이 부모 폭을 넘지 못하도록 제한한다.
+        레이아웃이 망가지지 않는다.
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Grid system 테스트</h1>
+        <div class="row">
+            <div class="col">칼럼1</div>
+            <div class="col">칼럼2</div>
+        </div>
+        <div class=row>
+            <div class="col">칼럼1</div>
+            <div class="col">칼럼2</div>
+            <div class="col">칼럼3</div>
+        </div>
+        <h1>칼럼에 이미지 배치해보기</h1>
+        <div class="row">
+            <div class="col"><img src="images/rabbit_1.png"></div>
+            <div class="col"><img src="images/rabbit_1.png"></div>
+            <div class="col"><img src="images/rabbit_1.png"></div>
+        </div>
+    </div>
+</body>
+</html>
+<!--
+    grid system
+    class="row", class="col" 을 이용해서 table 형식처럼 만들 수 있다.
+    ui를 배치할 때 격자를 만들어두고 그 안에 배치한다.
+    (칸의 개념을 만들어두고 그 안에 필요한 요소를 집어넣겠다. 다양한 사이트들처럼. 그게 뭐든 상관이 없다.)
+    col에 딱히 숫자를 적지 않으면 col에 대해 서로 같은 크기를 가지려고 한다.
+
+    * container > row > col의 원칙 지키기 *
+    - row, col 테이블 tr, td 사용하는 느낌으로 사용하기
+    - 만약 칼럼을 만들지 않을거라면 바로 블럭요소를 적어도 된다. ex)h1
+
+    grid system을 사용하는 이유
+    - 반응형 레이아웃을 쉽게 만들 수 있기 때문
+
+    *** 1-5단계 익혀두면 좋겠습니다 ***
+    1=0.25 rem 4px
+    2=0.5 rem 8px
+    3=1 rem 16px 기준
+    4=1.5 rem 24px
+    5=3.0 rem 48px
+-->
