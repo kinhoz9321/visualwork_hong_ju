@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery01_hello.html</title>
+    <script src="js/jquery-3.5.1.js"></script>
+</head>
+<body>
+    <button id="changeBtn">바꾸기</button>
+    
+    <p id="one">p1</p>
+    <p>p2</p>
+    <p class="my-class">p3</p>
+    <p class="my-class">p4</p>
+    <p class="my-class">p5</p>
+    <script>
+        /* 1
+        버튼을 눌렀을 때 실행할 함수 등록.
+        모든 p요소가 김구라로 바뀌게 만들어보기. 배열, for문 사용.
+        */
+        // document.querySelector("#changeBtn").addEventListener("click", function(){
+        //     let p=document.querySelectorAll("p");
+        //     for(let i=0; i<p.length; i++){
+        //         p[i].innerText="김구라";
+        //     };
+        // });
+
+        /* 2
+        버튼을 눌렀을 때 실행할 함수 등록.
+        버튼을 눌렀을 때 모든 p요소가 김구라 이면 해골로,
+        해골이면 김구라로 바뀌게 해보기. (개인적 궁금증!)
+        */
+        // document.querySelector("#changeBtn").addEventListener("click", function(){
+        //     let p=document.querySelectorAll("p");
+
+        //     for(let i=0; i<p.length; i++){
+        //         if(p[i].innerText=="김구라"){
+        //             p[i].innerText="해골";
+        //         }else{
+        //             p[i].innerText="김구라";
+        //         }
+        //     };
+        // });
+
+        /* 3
+        jQuery 사용
+        */
+        $("#changeBtn").on("click", function(){
+            $("p").text("해골");
+        });
+    </script>
+</body>
+</html>
+<!--
+    [ jQuery 쪼개기 ]
+
+    $("#changeBtn").on("click", function(){
+        $("p").text("해골");
+    });
+
+    1. $() 호출하면 조건에 맞는 배열의 참조값이 리턴된다.
+    (일반적인 배열이 아닌 제이쿼리의 기능이 합쳐진 배열을 리턴한다.)
+
+    2. $()의 ()안에는 css의 선택자와 똑같이 작성된다. 다만, 문자열로 쓸 뿐이다.
+    요소명, 클래스명, 아이디명, body>div 등 그렇다면 문서요소의 참조값을 배열에 넣어서 리턴해준다. 
+
+    3. $()는 querySelector()와 querySelectorAll()의 겸용
+    querySelector = 참조값이 리턴된다
+    querySelectorAll = 배열의 참조값이 리턴된다.
+
+    4. $()는 무조건 배열을 리턴해준다. 
+
+    * 제이쿼리의 구조 *
+    $().action(); 
+    - 문서객체 중에 필요한 것을 찾아서 동작을 한다. 
+    - 동작은 1200개 정도로 아주 많다. 그 중 자주 쓰는 것 50개 정도 배우면 왠만한 것은 다 할 수 있다. 
+    ex) $().action().action2().action3()... → 이렇게도 사용할 수 있다. 
+
+    * 자바스크립트의 CSS 적용과 제이쿼리의 CSS 적용 비교 *
+    1)
+    제이쿼리 inline css 적용
+    $("#one").css("color", "red");
+    자바스크립트 inline css 적용
+    #one참조.style.color="red";
+
+    2)
+    제이쿼리 inline css 적용
+    $(".my-class").css("border", "1px solid blue");
+    자바스크립트 inline css 적용
+    .my-class참조.style.border="1px solid blue";
+
+    * 제이쿼리는 자바스크립트, css와 비슷해서 동작과 사용법만 익히면 된다. 
+    * 제이쿼리는 플러그인으로 추가동작을 설정할 수도 있다. 
+
+    * 웹브라우저에서 디버깅 하는 법 *
+    1. 검사 → 소스 → 브레이크 포인트 찍기
+    2. 디버깅하고싶은 프로그램 동작
+    3. F10을 눌러서 한줄씩 디버깅하기
+
+    <디버깅 연습해보기. 어떤 건 잘되고 어떤 건 잘 안됨. 어떻게 해야 디버깅을 할 수 있는지 연구하기.>
+-->
